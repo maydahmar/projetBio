@@ -12,6 +12,11 @@ This README will guide you throughout the project and your analyses. All steps b
 This document will be updated at each session. 
 Refer to the update date above.
 
+You will work in pairs, from the begining. 
+You are allowed to discuss with other pairs, but no direct code sharing (copy/paste etc). 
+During all the project, note precisely your personnal contribution and the contribution of your pair.
+You be asked for this during the last session (~15 min oral presentation). 
+
 During each of the first sessions, you will be given lessons/introductions on notions you may not have yet. 
 Once this lessons start, stop all of your activities and follow the lessons, even if you are familar with the concept.
 
@@ -20,7 +25,7 @@ At the end of your project, you must send by email (phd.rinaudo@gmail.com):
 - A report containing the result of your analyses,
 - A text file (.csv, .txt...) contaning the ordered list of your top 100 genes (first = better).
 
-The email must have the subject: "Projet_bioinfo_2023_nom_prenom" and contains an archive named: "nom_prenom" with all the listed requirements.
+The email must have the subject: "Projet_bioinfo_2023_nom1_prenom1_nom2_prenom2" and contains an archive named: "nom1_prenom1_nom2_prenom2" with all the listed requirements.
 
 Note: It is possible to mix code and report in a notebook, and to mix notebook and independent code. 
 However, the report must be contained in a single document.
