@@ -5,6 +5,8 @@ import glob
 import re
 import xml.etree.ElementTree as et 
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
 
 
 
@@ -51,14 +53,25 @@ class RNASeq :
         return cv_sorted
     
     def print_hist(self):
-        ax = plt.figure()
-        cv = self.calculate_cv
-        t = [i for i in range(len(cv))]
-        ax.plot(t, cv)
-        ax.savefig("Histogramme.png")
+        cv = self.calculate_cv()
+        plot = cv.plot()
+        fig = plot.get_figure()
+        fig.savefig("Histogramme cv.png")
+
         
-        
-        
+    def center_data(self):
+        scaler = StandardScaler()
+        X = scaler.fit_transform(self.data_matrix) 
+        return X 
+
+    def calculate_pca(self):
+        pca = PCA(n_components=20)
+        pca_features = pca.fit_transform(self.center_data())
+        pca_df = pd.DataFrame(data=pca_features, columns=[f'PC{i}' for i in range(1,21)])
+        plot = pca_df.plot()
+        fig = plot.get_figure()
+        fig.savefig("Histogramme pca.png")
+
 
 
 
@@ -96,4 +109,6 @@ class annotation :
         return self.data_annotation 
 
 
+
+    
 
